@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "name": "Ritik Chauhan 12",
+      "phone": 8765432123,
+      "id": 3
+    },
+    {
+      "name": "mukul",
+      "phone": 98790,
+      "id": 4
+    },
+    {
+      "name": "Vinesh",
+      "phone": 6789765432,
+      "id": 5
+    },
+    {
+      "name": "asasa",
+      "phone": 7654323456,
+      "id": 6
+    }
+  ]
+}
