@@ -6,8 +6,13 @@ export const studentApi = createApi({
   tagTypes: ["addUSer"],
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3005/" }),
   endpoints: (builder) => ({
-    allStudents: builder.query<StudentTypes[], void>({
-      query: () => "/students",
+    allStudents: builder.query<StudentTypes[], any>({
+      query: (params) =>
+        `/students?&name_like=${params.searchValue}&_sort=id&_order=${params.orderType}&_start=${params.initialEntry}&_end=${params.finalEntry}`,
+      providesTags: ["addUSer"],
+    }),
+    totalNumberOfStudents: builder.query<any, any>({
+      query: (data:any) => "/students",
       providesTags: ["addUSer"],
     }),
     addStudents: builder.mutation<void, StudentTypes>({
@@ -25,11 +30,11 @@ export const studentApi = createApi({
       }),
       invalidatesTags: ["addUSer"],
     }),
-    updateStudents:builder.mutation<void,StudentTypes>({
-      query: ({id,...rest}) => ({
+    updateStudents: builder.mutation<void, StudentTypes>({
+      query: ({ id, ...rest }) => ({
         url: `/students/${id}`,
         method: "PUT",
-        body:rest
+        body: rest,
       }),
       invalidatesTags: ["addUSer"],
     }),
@@ -40,5 +45,12 @@ export const studentApi = createApi({
   }),
 });
 
-export const { useAllStudentsQuery, useAddStudentsMutation , useSingleViewUserQuery,useDeleteStudentsMutation,useUpdateStudentsMutation} = studentApi;
+export const {
+  useAllStudentsQuery,
+  useTotalNumberOfStudentsQuery,
+  useAddStudentsMutation,
+  useSingleViewUserQuery,
+  useDeleteStudentsMutation,
+  useUpdateStudentsMutation,
+} = studentApi;
 // export const {use} = studentApi

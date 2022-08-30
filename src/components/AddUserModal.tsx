@@ -24,6 +24,8 @@ const AddUserModal = ({ modal, onHide, details, setDetails }: any) => {
         toast.error('No update performed');
       } else {
         try {
+          console.log('values',values);
+          
           await updateStudents({ ...values, id: details.id });
           updateToast();
         } catch (error: any) {

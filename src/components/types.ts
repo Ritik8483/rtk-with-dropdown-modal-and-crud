@@ -1,5 +1,7 @@
 export interface StudentTypes{
     "id"?:string,
     "name":string,
-    "phone":number
+    "phone":number,
+    // "vhb":object.
+    // "vhb"? :object
 }

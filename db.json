@@ -1,11 +1,6 @@
 {
   "students": [
     {
-      "name": "Ritik Chauhan 12",
-      "phone": 8765432123,
-      "id": 3
-    },
-    {
       "name": "mukul",
       "phone": 98790,
       "id": 4
@@ -19,6 +14,96 @@
       "name": "asasa",
       "phone": 7654323456,
       "id": 6
+    },
+    {
+      "name": "names chmmm",
+      "phone": 90991221223,
+      "id": 7
+    },
+    {
+      "name": "sdsd5566",
+      "phone": 78765434,
+      "id": 8
+    },
+    {
+      "name": ",mjhnghfydf ",
+      "phone": 87654356676,
+      "id": 9
+    },
+    {
+      "name": "76755645",
+      "phone": 3422654,
+      "id": 10
+    },
+    {
+      "name": "65645454657645",
+      "phone": 6675654656,
+      "id": 11
+    },
+    {
+      "name": "776546356477",
+      "phone": 6676654635423,
+      "id": 12
+    },
+    {
+      "name": "hgdhgrr",
+      "phone": 765432243,
+      "id": 13
+    },
+    {
+      "name": "i6765645345356",
+      "phone": 6564353,
+      "id": 14
+    },
+    {
+      "name": "53465646",
+      "phone": 675678676,
+      "id": 15
+    },
+    {
+      "name": "ritikChauhan",
+      "phone": 123232323,
+      "id": 16
+    },
+    {
+      "name": "jbhdg gn",
+      "phone": 8089898,
+      "id": 17
+    },
+    {
+      "name": "fvdsafvc",
+      "phone": 465465654,
+      "id": 18
+    },
+    {
+      "name": "vinit",
+      "phone": 56565656565,
+      "id": 19
+    },
+    {
+      "name": "pooja yadav",
+      "phone": 657543,
+      "id": 20
+    },
+    {
+      "name": "big boss",
+      "phone": 56787652,
+      "id": 21
+    },
+    {
+      "name": "56432",
+      "phone": 546576465,
+      "id": 22
+    },
+    {
+      "name": "buggi",
+      "phone": 54645654,
+      "id": 23
+    },
+    {
+      "name": "Kintel",
+      "phone": 876875644,
+      "id": 24
     }
   ]
 }
