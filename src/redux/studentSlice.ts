@@ -11,7 +11,7 @@ export const studentApi = createApi({
         `/students?&name_like=${params.searchValue}&_sort=id&_order=${params.orderType}&_start=${params.initialEntry}&_end=${params.finalEntry}`,
       providesTags: ["addUSer"],
     }),
-    totalNumberOfStudents: builder.query<any, any>({
+    totalNumberOfStudents: builder.query<any, void>({
       query: (data:any) => "/students",
       providesTags: ["addUSer"],
     }),

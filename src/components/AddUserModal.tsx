@@ -67,7 +67,7 @@ const AddUserModal = ({ modal, onHide, details, setDetails }: any) => {
       <Modal show={modal} onHide={onHide}>
         <Modal.Header>
           <Modal.Title className="w-100 d-flex justify-content-between align-items-center">
-            Add Student
+            {details.id ? 'Edit' : 'Add'} Student
             <CloseButton onClick={handleCloseButton} />
           </Modal.Title>
         </Modal.Header>

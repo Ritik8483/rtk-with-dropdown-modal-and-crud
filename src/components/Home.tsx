@@ -34,7 +34,7 @@ const Home = () => {
 
   const notify = () => toast.success("Student deleted successfully ");
 
-  const { data: dataTs } = useTotalNumberOfStudentsQuery("");
+  const { data: dataTs } = useTotalNumberOfStudentsQuery();
   console.log("df", dataTs?.length);
   const totalPages = Math.ceil(dataTs?.length / pageSize);
   const { data, error, isLoading, isFetching, isSuccess } = useAllStudentsQuery(
@@ -161,7 +161,12 @@ const Home = () => {
                 <tr key={index}>
                   <td>
                     {sortBtn && currentPage === 1
-                      ? dataTs?.length-index : sortBtn && currentPage ? (dataTs?.length)+pageSize-index-pageSize*currentPage
+                      ? dataTs?.length - index
+                      : sortBtn && currentPage
+                      ? dataTs?.length +
+                        pageSize -
+                        index -
+                        pageSize * currentPage
                       : currentPage === 1
                       ? index + 1
                       : currentPage * pageSize - pageSize + 1 + index}
