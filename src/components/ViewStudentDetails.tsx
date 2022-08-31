@@ -29,7 +29,7 @@ const ViewStudentDetails = () => {
           <div className="d-flex justify-content-center align-items-center flex-column gap-3">
             <h1>Name : {data?.name}</h1>
             <h1>Phone : {data?.phone}</h1>
-            <Button variant="secondary" onClick={() => navigate(-1)}>
+            <Button variant="secondary" onClick={() => navigate('/home')}>
               Home page
             </Button>
           </div>

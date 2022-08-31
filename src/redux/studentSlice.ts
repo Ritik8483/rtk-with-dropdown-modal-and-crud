@@ -53,4 +53,3 @@ export const {
   useDeleteStudentsMutation,
   useUpdateStudentsMutation,
 } = studentApi;
-// export const {use} = studentApi

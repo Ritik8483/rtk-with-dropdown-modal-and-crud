@@ -10,13 +10,16 @@ import {
   Routes
 } from "react-router-dom";
 import ViewStudentDetails from "./components/ViewStudentDetails";
+import AuthPage from "./components/AuthPage";
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<AuthPage/>} />
+          <Route path="/auth" element={<AuthPage/>} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/view/:id" element={<ViewStudentDetails/>} />
         </Routes>
       </Router>

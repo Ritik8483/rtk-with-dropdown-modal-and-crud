@@ -15,10 +15,13 @@ import { useNavigate } from "react-router-dom";
 import { Audio, Circles } from "react-loader-spinner";
 import Form from "react-bootstrap/Form";
 import Pagination from "react-responsive-pagination";
+import { useDispatch } from "react-redux";
+import { logout } from "../redux/AuthApiSlice";
 // import { useDebounce } from "use-debounce";
 
 const Home = () => {
   const navigate = useNavigate();
+  const dispatch=useDispatch();
   const [modal, setModal] = useState<boolean>(false);
   const [details, setDetails] = useState<any>("");
   const [searchValue, setSearchValue] = useState("");
@@ -95,12 +98,11 @@ const Home = () => {
     }
   };
 
-  // if(sortBtn){
-  //   toast.success('Data sorted in ascending order');
-  // }
-  // else{
-  //   toast.error('Data sorted in descending order');
-  // }
+  const handleLogout=()=>{
+    dispatch(logout());
+    toast.success('Student logout successfully!');
+    navigate('/auth');
+  }
   const handleSort = () => {
     setSortBtn(!sortBtn);
     if (!sortBtn) {
@@ -122,6 +124,9 @@ const Home = () => {
             placeholder="search by name"
           />
         </Form.Group>
+        <Button variant="light" className="m-0" onClick={handleLogout}>
+          Logout
+        </Button>
       </div>
       <div className="d-flex flex-column justify-content-center align-items-center">
         {isLoading ? (
