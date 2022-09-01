@@ -79,6 +79,7 @@ const AuthPage = () => {
   const handleLogin = async () => {
     if (email && password) {
       await loginStudentApi({ email, password });
+      navigate('/home');
     } else {
       toast.error("Please fill all the inputs");
     }
